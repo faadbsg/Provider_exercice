@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider_exercice_prepa/cubit/provider_ex_cubit.dart';
 import 'package:provider_exercice_prepa/display_values.dart';
 import 'package:provider_exercice_prepa/tata.dart';
 import 'package:provider_exercice_prepa/toto.dart';
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
       providers: [
         Provider<Toto>(create: (context) => const Toto(stringValue: 'Faadel')),
         ChangeNotifierProvider<Tata>(create: (context) => Tata()),
+        BlocProvider(create: (context) => ProviderExCubit()),
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -26,3 +29,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// class MyAppCubit extends StatelessWidget {
+//   const MyAppCubit({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocProvider(create: (context));
+//   }
+// }
