@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<Toto>(create: (context) => const Toto(stringValue: 'Faadel')),
+        Provider<Toto>(create: (context) => Toto()),
         ChangeNotifierProvider<Tata>(create: (context) => Tata()),
         BlocProvider(create: (context) => ProviderExCubit()),
       ],

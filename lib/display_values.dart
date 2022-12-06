@@ -82,6 +82,8 @@ class _DisplayValuesState extends State<DisplayValues> {
                   onPressed: () {
                     Provider.of<Tata>(context, listen: false)
                         .setValue(_controller.text);
+                    Provider.of<Toto>(context, listen: false)
+                        .setTotoValue(_controller.text);
                     _controller.clear();
                     setState(() {});
                   },
